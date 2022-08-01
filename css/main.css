@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 100px;
+  text-align: center;
+}
+
+body #toolbar {
+  padding: 20px;
+}
+
+body #toolbar input, body #toolbar select {
+  padding: 5px;
+}
+
+body button {
+  padding: 5px;
+  width: 50px;
+}
+
+h1 {
+  font-family: "Koulen", cursive;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#result {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+#result .image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+#result .image-box img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+#result .image-box img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#result .image-box .likes {
+  margin-top: 6px;
+}
+
+#result .image-box .likes i {
+  color: red;
+}
+
+#result .user-container {
+  margin-top: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#result .user-container .user-img {
+  border-radius: 50px;
+  width: 10%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#result .user-container .user {
+  width: 90%;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 6px;
+}
