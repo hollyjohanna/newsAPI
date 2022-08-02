@@ -6,25 +6,72 @@
 }
 
 body {
-  padding: 100px;
   text-align: center;
 }
 
-body #toolbar {
+nav .upper-nav {
+  background-color: #323232;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .upper-nav p {
+  margin: 0;
+  font-size: 12px;
+  color: white;
+}
+
+nav .lower-nav {
+  background-color: bisque;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .lower-nav .bi-list {
+  font-size: 40px;
+}
+
+nav .lower-nav #logo-text {
+  font-family: "Bowlby One SC", cursive;
+  font-size: 25px;
+  margin: 0;
+  margin-bottom: -17px;
+}
+
+#toolbar {
   padding: 20px;
 }
 
-body #toolbar input, body #toolbar select {
+#toolbar input {
+  width: 90%;
   padding: 5px;
 }
 
-body button {
+#toolbar select {
+  padding: 5px;
+}
+
+button {
   padding: 5px;
   width: 50px;
 }
 
 h1 {
-  font-family: "Koulen", cursive;
+  font-family: "Bowlby One SC", cursive;
   font-size: 60px;
   margin-bottom: 10px;
 }
@@ -44,8 +91,8 @@ p {
 #result {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 

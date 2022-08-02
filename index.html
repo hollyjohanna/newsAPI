@@ -6,22 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!--Google Fonts CDN-->
+    <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--Google Fonts CDN-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Koulen&family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <!--Stylesheet-->
     <link rel="stylesheet" href="css/main.css">
     <title>News API</title>
 </head>
 <body>
-
-    <h1>News API</h1>
+    <nav>
+        <div class="upper-nav">
+            <div id="date-result"></div>
+            <p>Login/Register</p>
+        </div>
+        <div class="lower-nav">
+            <div class="logo">
+                <p id="logo-text">NEWS</p>
+                <p id="logo-text">ZONE</p>
+            </div>
+            <i class="bi bi-list"></i>
+        </div>
+    </nav>
     <div id="toolbar">
         <input type="text" placeholder="search" name="search-terms" id="search-terms">
+        <i class="bi bi-search"></i>
         <select name="sort-input" id="sort-input">
             <option value="" disable selected>Sort</option>
+            <option value="&order=popular">Popular</option>
+            <option value="&order=latest">Latest</option>
+        </select>
+        <select name="country-input" id="country-input">
+            <option value="" disable selected>Country</option>
+            <option value="&order=popular">United States</option>
+            <option value="&order=latest">Latest</option>
+        </select>
+        <select name="category-input" id="category-input">
+            <option value="" disable selected>Category</option>
             <option value="&order=popular">Popular</option>
             <option value="&order=latest">Latest</option>
         </select>

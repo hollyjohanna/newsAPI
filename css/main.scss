@@ -1,6 +1,7 @@
 //Fonts
-$header: 'Koulen', cursive;
+$header: 'Bowlby One SC', cursive;
 $mainfont: 'Quicksand', sans-serif;
+$bold: 'Koulen', cursive;
 
 
 * {
@@ -10,19 +11,56 @@ $mainfont: 'Quicksand', sans-serif;
 }
 
 body {
-    padding: 100px;
     text-align: center;
-    #toolbar {
-        padding: 20px;
-        input, select {
-            padding: 5px;
+}
+
+nav {
+    .upper-nav {
+        background-color: rgb(50, 50, 50);
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        p {
+            margin: 0;
+            font-size: 12px;
+            color: white;
         }
     }
-    button {
-        padding: 5px;
-        width: 50px;
+    .lower-nav {
+        background-color: bisque;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .bi-list {
+            font-size: 40px;
+        }
+        #logo-text {
+            font-family: $header;
+            font-size: 25px;
+            margin: 0;
+            margin-bottom: -17px;
+        }
     }
 }
+
+
+#toolbar {
+    padding: 20px;
+    input {
+        width: 90%;
+        padding: 5px;
+    }
+    select {
+        padding: 5px;
+    }
+}
+button {
+    padding: 5px;
+    width: 50px;
+}
+
 
 h1 {
     font-family: $header;
@@ -43,7 +81,7 @@ p {
 
 #result {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     .image-box {
         display: flex;

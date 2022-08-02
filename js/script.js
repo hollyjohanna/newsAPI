@@ -1,6 +1,25 @@
+//----------------------------------Current Date-----------------------------
+const dateResult = document.getElementById("date-result");
+const date = new Date();
+const weekDay = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+let currentDate = `${weekDay[date.getDay()]} ${day}/${month}/${year}`;
+dateResult.innerHTML = `<p>${currentDate}</p>`;
 //---------------------------declare our settings---------------------------
 const apiKey = "&apiKey=9129238b16e8447898d8fe188a66f970";
-const endPointURL = "https://newsapi.org/v2/everything";
+const endPointURL = "https://newsapi.org/v2/top-headlines";
 
 //----------------------------declare our elements------------------------
 const result = document.getElementById("result");
@@ -20,14 +39,13 @@ let showArticles = (articles) => {
         return item.userImageURL;
       }
     };
-    console.log(item.largeImageURL);
+    // console.log(item.urlToImage);
     result.innerHTML += `
     <div class="image-box">
       <img src="${item.urlToImage}">
       <p>${item.title}</p>
       <div class="user-container">
         <img class="user-img" src="${checkIfImageExists()}">
-        <p class="user">${item.user}</p>
       </div>
     </div>
     `;
@@ -39,7 +57,7 @@ let showArticles = (articles) => {
 
 $.ajax({
   type: "GET",
-  url: endPointURL + "?q=keyword" + apiKey,
+  url: endPointURL + "?language=en" + apiKey,
   success: (data) => {
     console.log(data.articles);
     showArticles(data.articles);
