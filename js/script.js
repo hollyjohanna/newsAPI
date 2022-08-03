@@ -1,3 +1,23 @@
+//----------------------------------Navigation-----------------------------
+const navBtn = document.getElementById("nav-button");
+const navLinks = document.getElementById("nav-link-container");
+
+navBtn.onclick = function () {
+  navLinks.classList.toggle("active");
+};
+//----------------------------------Overlay Effects-----------------------------
+const aboutOverlayBtn = document.getElementById("about-overlay-toggle");
+const aboutOverlay = document.getElementById("about-overlay");
+const aboutCloseBtn = document.getElementById("about-overlay-close-button");
+
+aboutOverlayBtn.onclick = function () {
+  aboutOverlay.classList.toggle("active");
+  navLinks.classList.toggle("active");
+};
+
+aboutCloseBtn.onclick = function () {
+  aboutOverlay.classList.toggle("active");
+};
 //----------------------------------Current Date-----------------------------
 const dateResult = document.getElementById("date-result");
 const date = new Date();
@@ -24,29 +44,27 @@ const endPointURL = "https://newsapi.org/v2/top-headlines";
 //----------------------------declare our elements------------------------
 const result = document.getElementById("result");
 const searchInput = document.getElementById("search-terms");
-const sortInput = document.getElementById("sort-input");
+const countryInput = document.getElementById("country-input");
+const categoryInput = document.getElementById("category-input");
 const goBtn = document.getElementById("go-button");
 
-//----------------------------showing images------------------------------
+//----------------------------showing articles------------------------------
 let showArticles = (articles) => {
   result.innerHTML = "";
   //this function rendrs the image on the page
   let renderArticle = (item, index) => {
-    let checkIfImageExists = () => {
-      if (item.urlToImage == "") {
-        return "https://static.vecteezy.com/system/resources/previews/002/318/271/original/user-profile-icon-free-vector.jpg";
+    // console.log(item.urlToImage);
+    let checkUrlImage = () => {
+      if (item.urlToImage == null) {
+        return "https://cdn.pixabay.com/photo/2014/05/21/22/28/old-newspaper-350376_1280.jpg";
       } else {
-        return item.userImageURL;
+        return item.urlToImage;
       }
     };
-    // console.log(item.urlToImage);
     result.innerHTML += `
     <div class="image-box">
-      <img src="${item.urlToImage}">
+      <img src="${checkUrlImage()}" onError="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2014/05/21/22/28/old-newspaper-350376_1280.jpg';"/>
       <p>${item.title}</p>
-      <div class="user-container">
-        <img class="user-img" src="${checkIfImageExists()}">
-      </div>
     </div>
     `;
   };
@@ -72,23 +90,23 @@ $.ajax({
 
 goBtn.onclick = () => {
   searchString = searchInput.value;
-  sortValue = sortInput.value;
-  imageTypeValue = imageTypeInput.value;
-  colorValue = colorInput.value;
+  category = categoryInput.value;
+  country = countryInput.value;
   // console.log(searchString);
+
   $.ajax({
     type: "GET",
     url:
       endPointURL +
-      apiKey +
-      "&q=" +
+      "?q=" +
       searchString +
-      sortValue +
-      imageTypeValue +
-      colorValue,
+      category +
+      country +
+      // "&pageSize=20" +
+      apiKey,
     success: (data) => {
-      console.log(data.hits);
-      showImages(data.hits);
+      console.log(data.articles);
+      showArticles(data.articles);
     },
     error: function (error) {
       console.log(error);
