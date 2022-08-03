@@ -17,6 +17,11 @@
     <title>News API</title>
 </head>
 <body>
+    <div class="about-overlay" id="about-overlay">
+        <i class="bi bi-x-square" id="about-overlay-close-button"></i>
+        <h2>Content</h2>
+        <p>here is some information about me and about the app</p>
+    </div>
     <nav>
         <div class="upper-nav">
             <div id="date-result"></div>
@@ -27,30 +32,50 @@
                 <p id="logo-text">NEWS</p>
                 <p id="logo-text">ZONE</p>
             </div>
-            <i class="bi bi-list"></i>
+            <i id="nav-button" class="bi bi-list"></i>
+        </div>
+        <div id="nav-link-container">
+            <ul>
+                <li class="nav-links"><a href="#">Home</a></li>
+                <li class="nav-links" id="about-overlay-toggle"><a href="#">About</a></li>
+                <li class="nav-links"><a href="#">Article List</a></li>
+                <li class="nav-links"><a href="#">Featured</a></li>
+            </ul>
         </div>
     </nav>
-    <div id="toolbar">
-        <input type="text" placeholder="search" name="search-terms" id="search-terms">
-        <i class="bi bi-search"></i>
-        <select name="sort-input" id="sort-input">
-            <option value="" disable selected>Sort</option>
-            <option value="&order=popular">Popular</option>
-            <option value="&order=latest">Latest</option>
-        </select>
-        <select name="country-input" id="country-input">
-            <option value="" disable selected>Country</option>
-            <option value="&order=popular">United States</option>
-            <option value="&order=latest">Latest</option>
-        </select>
-        <select name="category-input" id="category-input">
-            <option value="" disable selected>Category</option>
-            <option value="&order=popular">Popular</option>
-            <option value="&order=latest">Latest</option>
-        </select>
-        <button id="go-button">Go</button>
+    <div class="main">
+        <div id="toolbar">
+            <input type="text" placeholder="search" name="search-terms" id="search-terms">
+            <i class="bi bi-search"></i>
+            <select name="country-input" id="country-input">
+                <option value="" disable selected>Country</option>
+                <option value="&country=nz">New Zealand</option>
+                <option value="&country=us">United States</option>
+                <option value="&country=ca">Canada</option>
+                <option value="&country=gb">Great Britain</option>
+                <option value="&country=au">Australia</option>
+                <option value="&country=fr">France</option>
+            </select>
+            <select name="category-input" id="category-input">
+                <option value="" disable selected>Category</option>
+                <option value="&category=buisness">Buisness</option>
+                <option value="&category=entertainment">Entertainment</option>
+                <option value="&category=general">General</option>
+                <option value="&category=health">Health</option>
+                <option value="&category=science">Science</option>
+                <option value="&category=sports">Sports</option>
+                <option value="&category=technology">Technology</option>
+            </select>
+            <button id="go-button">Go</button>
+        </div>
+        <div id="result"></div>
     </div>
-    <div id="result"></div>
+
+    <footer>
+        <div class="footer-main-container">
+            <p>hello</p>
+        </div>
+    </footer>
     
     <!--Animation Library-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
