@@ -18,9 +18,29 @@
 </head>
 <body>
     <div class="about-overlay" id="about-overlay">
-        <i class="bi bi-x-square" id="about-overlay-close-button"></i>
-        <h2>Content</h2>
-        <p>here is some information about me and about the app</p>
+        <div class="overlay-upper-nav"></div>
+        <div class="overlay-nav">
+            <h2>About</h2>
+            <i class="bi bi-x-square" id="about-overlay-close-button"></i>
+        </div>
+        <div class="overlay-content">
+            <div class="overlay-hero">
+                <div class="overlay-hero-text">
+                    <h3>About The App</h3>
+                    <p>News Zone is a simple application with news articles generated from an API (newsapi.org). The app has capability to search through top headlines, sort by category and sort by country of origin the news article has come from.
+                        The task was to use an API and get data and make a simple app that shows the data with capability to do simple searching.
+                    </p>
+                    <p>In the world of technology mobile news sites are being used more than print media. This app created by Holliday Robbins simply shows the articles from external sources along with photos and headlines.</p>
+                </div>
+                <img src="img/news.png" alt="Two Phones with news websites on them">
+            </div>
+            <div class="overlay-author-section">
+                <h3>About The Creator</h3>
+                <p>Hi, I'm Holliday! I'm the creator of the app News Zone. I am new to coding and software development but so far it is going very well. I really enjoy the design side but as time goes on I enjoy the coding and development just as much.</p> 
+                <p>Practise apps like this one are very helpful for me to continue to learn and use my new skills. I am hoping to get into UX design with a good amount of coding knowledge within the next year.</p>
+                <img src="img/holly.JPG" alt="A picture of Holliday">
+            </div>
+        </div>
     </div>
     <nav>
         <div class="upper-nav">
@@ -38,41 +58,46 @@
             <ul>
                 <li class="nav-links"><a href="#">Home</a></li>
                 <li class="nav-links" id="about-overlay-toggle"><a href="#">About</a></li>
-                <li class="nav-links"><a href="#">Article List</a></li>
+                <li class="nav-links"><a href="#">Contact</a></li>
                 <li class="nav-links"><a href="#">Featured</a></li>
             </ul>
         </div>
     </nav>
     <div class="main">
         <div id="toolbar">
-            <input type="text" placeholder="search" name="search-terms" id="search-terms">
-            <i class="bi bi-search"></i>
-            <select name="country-input" id="country-input">
-                <option value="" disable selected>Country</option>
-                <option value="&country=nz">New Zealand</option>
-                <option value="&country=us">United States</option>
-                <option value="&country=ca">Canada</option>
-                <option value="&country=gb">Great Britain</option>
-                <option value="&country=au">Australia</option>
-                <option value="&country=fr">France</option>
-            </select>
-            <select name="category-input" id="category-input">
-                <option value="" disable selected>Category</option>
-                <option value="&category=buisness">Buisness</option>
-                <option value="&category=entertainment">Entertainment</option>
-                <option value="&category=general">General</option>
-                <option value="&category=health">Health</option>
-                <option value="&category=science">Science</option>
-                <option value="&category=sports">Sports</option>
-                <option value="&category=technology">Technology</option>
-            </select>
-            <button id="go-button">Go</button>
+            <div class="search-bar">
+                <input type="text" placeholder="Search" name="search-terms" id="search-terms">
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="filter-bar">
+                <select name="country-input" id="country-input">
+                    <option value="" disable selected>Country</option>
+                    <option value="&country=nz">New Zealand</option>
+                    <option value="&country=us">United States</option>
+                    <option value="&country=ca">Canada</option>
+                    <option value="&country=gb">Great Britain</option>
+                    <option value="&country=au">Australia</option>
+                    <option value="&country=fr">France</option>
+                </select>
+                <select name="category-input" id="category-input">
+                    <option value="" disable selected>Category</option>
+                    <option value="&category=buisness">Buisness</option>
+                    <option value="&category=entertainment">Entertainment</option>
+                    <option value="&category=general">General</option>
+                    <option value="&category=health">Health</option>
+                    <option value="&category=science">Science</option>
+                    <option value="&category=sports">Sports</option>
+                    <option value="&category=technology">Technology</option>
+                </select>
+                <button id="go-button">Go</button>
+            </div>
         </div>
         <div id="result"></div>
     </div>
 
     <footer>
         <div class="footer-main-container">
+            <li></li>
             <p>hello</p>
         </div>
     </footer>

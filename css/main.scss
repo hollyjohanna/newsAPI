@@ -23,13 +23,69 @@ body {
         left: -430px;
         top: 0;
         transition: all 0.5s ease-in-out;
+        .overlay-upper-nav {
+            height: 35px;
+            background-color: rgb(50, 50, 50);
+        }
+        .overlay-nav {
+            background-color: bisque;
+            h2 {
+                padding: 30px;
+                font-size: 30px;
+                font-family: $mainfont;
+                margin: 0;
+            }
+            .bi-x-square {
+                position: absolute;
+                font-size: 20px;
+                right: 30px;
+                top: 70px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .bi-x-square:hover {
+                color: white;
+            }
+        }
+        .overlay-content {
+            h3 {
+                margin-bottom: 15px;
+                font-family: $mainfont;
+                font-size: 20px;
+            }
+            p {
+                font-family: $mainfont;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            .overlay-hero {
+                padding: 30px 40px;
+                .overlay-hero-text {
+                    width: 100%;
+                }
+                img {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .overlay-author-section {
+                background-color: rgb(229, 255, 246);
+                padding: 30px 40px;
+                img {
+                    width: 90%;
+                    border-radius: 50%;
+                };
+            }
+        }
     }
     .about-overlay.active {
         visibility: visible;
-        background-color: rgba(255, 255, 255, 0.90);
+        background-color: rgb(255, 255, 255);
         width: 100%;
         height: 100%;
         overflow-x: visible;
+        overflow-y: auto;
         transition: all 0.5s ease-in-out;
         z-index: 6;
         position: fixed;
@@ -154,13 +210,31 @@ nav {
     min-height: calc(100vh - 210px);
     #toolbar {
         padding: 20px;
-        input {
-            width: 90%;
-            padding: 5px;
-            margin-bottom: 10px;
+        .search-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            input {
+                width: 90%;
+                padding: 5px;
+                margin-bottom: 10px;
+            }
+            i {
+                width: 10%;
+                font-size: 20px;
+            }
         }
-        select {
-            padding: 5px;
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            select {
+                padding: 5px;
+                width: 38%;
+            }
+            button {
+                width: 20%;
+            }
         }
     }
     #result {

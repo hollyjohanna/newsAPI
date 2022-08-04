@@ -23,12 +23,79 @@ body .about-overlay {
   transition: all 0.5s ease-in-out;
 }
 
+body .about-overlay .overlay-upper-nav {
+  height: 35px;
+  background-color: #323232;
+}
+
+body .about-overlay .overlay-nav {
+  background-color: bisque;
+}
+
+body .about-overlay .overlay-nav h2 {
+  padding: 30px;
+  font-size: 30px;
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+}
+
+body .about-overlay .overlay-nav .bi-x-square {
+  position: absolute;
+  font-size: 20px;
+  right: 30px;
+  top: 70px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .about-overlay .overlay-nav .bi-x-square:hover {
+  color: white;
+}
+
+body .about-overlay .overlay-content h3 {
+  margin-bottom: 15px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+}
+
+body .about-overlay .overlay-content p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+body .about-overlay .overlay-content .overlay-hero {
+  padding: 30px 40px;
+}
+
+body .about-overlay .overlay-content .overlay-hero .overlay-hero-text {
+  width: 100%;
+}
+
+body .about-overlay .overlay-content .overlay-hero img {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body .about-overlay .overlay-content .overlay-author-section {
+  background-color: #e5fff6;
+  padding: 30px 40px;
+}
+
+body .about-overlay .overlay-content .overlay-author-section img {
+  width: 90%;
+  border-radius: 50%;
+}
+
 body .about-overlay.active {
   visibility: visible;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   width: 100%;
   height: 100%;
   overflow-x: visible;
+  overflow-y: auto;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   z-index: 6;
@@ -181,14 +248,46 @@ nav #nav-link-container ul li a {
   padding: 20px;
 }
 
-.main #toolbar input {
+.main #toolbar .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main #toolbar .search-bar input {
   width: 90%;
   padding: 5px;
   margin-bottom: 10px;
 }
 
-.main #toolbar select {
+.main #toolbar .search-bar i {
+  width: 10%;
+  font-size: 20px;
+}
+
+.main #toolbar .filter-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main #toolbar .filter-bar select {
   padding: 5px;
+  width: 38%;
+}
+
+.main #toolbar .filter-bar button {
+  width: 20%;
 }
 
 .main #result {
