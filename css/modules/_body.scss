@@ -1,0 +1,128 @@
+//-----------------------------Main Content--------------------------
+.main {
+    min-height: calc(100vh - 210px);
+    #toolbar {
+        padding: 20px;
+        .search-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            input {
+                width: 90%;
+                padding: 5px;
+                margin-bottom: 10px;
+                font-family: $mainfont;
+            }
+            i {
+                width: 10%;
+                font-size: 20px;
+            }
+        }
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            select {
+                padding: 5px;
+                width: 38%;
+                font-family: $mainfont;
+            }
+            #go-button {
+                width: 20%;
+                @include button;
+                transition: all 0.3s ease-in-out;
+            }
+            #go-button:hover {
+                background-color: $beige;
+                color: black;
+            }
+        }
+    }
+    #result {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        .image-box {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                transition: 0.3s ease-in-out;
+            }
+            img:hover {
+                border-radius: 10px;
+            }
+        }
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: $mainfont;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        a:hover {
+            color: green;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    
+}
+@media only screen and (min-width: 768px) {
+    .main {
+        #toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            .search-bar {
+                width: 48%;
+                flex-direction: row-reverse;
+                margin-right: 10px;
+                input {
+                    margin: 0;
+                }
+                i {
+                    margin-top: auto;
+                    margin-bottom: auto;
+                }
+            }
+            .filter-bar {
+                width: 50%;
+                #go-button {
+                    font-size: 18px;
+                }
+            }
+        }
+        #result {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;    
+        }
+    }
+    
+}
+@media only screen and (min-width: 1040px) {
+    .main {
+        #toolbar {
+            padding: 20px 100px;
+        }
+        #result {
+            padding: 50px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;   
+            .image-box {
+                img {
+                    height: 200px;
+                }
+            } 
+        }
+    }
+}

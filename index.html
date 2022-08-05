@@ -35,9 +35,11 @@
                 <img src="img/news.png" alt="Two Phones with news websites on them">
             </div>
             <div class="overlay-author-section">
-                <h3>About The Creator</h3>
-                <p>Hi, I'm Holliday! I'm the creator of the app News Zone. I am new to coding and software development but so far it is going very well. I really enjoy the design side but as time goes on I enjoy the coding and development just as much.</p> 
-                <p>Practise apps like this one are very helpful for me to continue to learn and use my new skills. I am hoping to get into UX design with a good amount of coding knowledge within the next year.</p>
+                <div class="author-text">
+                    <h3>About The Creator</h3>
+                    <p>Hi, I'm Holliday! I'm the creator of the app News Zone. I am new to coding and software development but so far it is going very well. I really enjoy the design side but as time goes on I enjoy the coding and development just as much.</p> 
+                    <p>Practise apps like this one are very helpful for me to continue to learn and use my new skills. I am hoping to get into UX design with a good amount of coding knowledge within the next year.</p>
+                </div>
                 <img src="img/holly.JPG" alt="A picture of Holliday">
             </div>
         </div>
@@ -49,56 +51,83 @@
         </div>
         <div class="lower-nav">
             <div class="logo">
-                <p id="logo-text">NEWS</p>
-                <p id="logo-text">ZONE</p>
+                <p class="logo-text">NEWS</p>
+                <p class="logo-text">ZONE</p>
             </div>
             <i id="nav-button" class="bi bi-list"></i>
-        </div>
-        <div id="nav-link-container">
-            <ul>
-                <li class="nav-links"><a href="#">Home</a></li>
-                <li class="nav-links" id="about-overlay-toggle"><a href="#">About</a></li>
-                <li class="nav-links"><a href="#">Contact</a></li>
-                <li class="nav-links"><a href="#">Featured</a></li>
-            </ul>
+            <div id="nav-link-container">
+                <ul>
+                    <li class="nav-links"><a href="#">Home</a></li>
+                    <li class="nav-links" id="about-overlay-toggle"><a href="#">About</a></li>
+                    <li class="nav-links"><a href="#">Contact</a></li>
+                    <li class="nav-links"><a href="#">Featured</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="main">
         <div id="toolbar">
             <div class="search-bar">
                 <input type="text" placeholder="Search" name="search-terms" id="search-terms">
-                <i class="bi bi-search"></i>
+                <i class="bi bi-search" id="search-button"></i>
             </div>
             <div class="filter-bar">
                 <select name="country-input" id="country-input">
                     <option value="" disable selected>Country</option>
-                    <option value="&country=nz">New Zealand</option>
-                    <option value="&country=us">United States</option>
-                    <option value="&country=ca">Canada</option>
-                    <option value="&country=gb">Great Britain</option>
-                    <option value="&country=au">Australia</option>
-                    <option value="&country=fr">France</option>
+                    <option value="country=nz">New Zealand</option>
+                    <option value="country=us">United States</option>
+                    <option value="country=ca">Canada</option>
+                    <option value="country=gb">Great Britain</option>
+                    <option value="country=au">Australia</option>
+                    <option value="country=fr">France</option>
                 </select>
                 <select name="category-input" id="category-input">
                     <option value="" disable selected>Category</option>
-                    <option value="&category=buisness">Buisness</option>
-                    <option value="&category=entertainment">Entertainment</option>
-                    <option value="&category=general">General</option>
-                    <option value="&category=health">Health</option>
-                    <option value="&category=science">Science</option>
-                    <option value="&category=sports">Sports</option>
-                    <option value="&category=technology">Technology</option>
+                    <option value="category=buisness">Buisness</option>
+                    <option value="category=entertainment">Entertainment</option>
+                    <option value="category=general">General</option>
+                    <option value="category=health">Health</option>
+                    <option value="category=science">Science</option>
+                    <option value="category=sports">Sports</option>
+                    <option value="category=technology">Technology</option>
                 </select>
-                <button id="go-button">Go</button>
+                <button id="go-button" class="button">Go</button>
             </div>
         </div>
+        <div id="result-2"></div>
         <div id="result"></div>
     </div>
 
     <footer>
+        <div class="footer-upper-container">
+            <div class="logo">
+                <p class="logo-text">NEWS</p>
+                <p class="logo-text">ZONE</p>
+            </div>
+            <p id="footer-quote">Start your day with the latest news stories in your inbox.</p>
+            <div class="subscribe-container">
+                <input type="text" placeholder="email@mail.com" name="email" required>
+                <button id="subscribe-button" class="button">Subscribe</button>
+            </div>
+        </div>
         <div class="footer-main-container">
-            <li></li>
-            <p>hello</p>
+            <div id="footer-link-container">
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Community Rules</a></li>
+                </ul>
+            </div>
+            <div id="socials-container">
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-linkedin"></i>
+            </div>
+        </div>
+        <div class="footer-lower-container">
+            <p>Copyright 2022</p>
         </div>
     </footer>
     

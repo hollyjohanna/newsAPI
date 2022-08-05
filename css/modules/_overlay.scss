@@ -1,0 +1,170 @@
+body {
+    text-align: center;
+    .about-overlay {
+        visibility: hidden;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        z-index: 1;
+        position: fixed;
+        left: -430px;
+        top: 0;
+        transition: all 0.5s ease-in-out;
+        .overlay-upper-nav {
+            height: 35px;
+            background-color: $darkgrey;
+        }
+        .overlay-nav {
+            background-color: $beige;
+            h2 {
+                padding: 30px;
+                font-size: 30px;
+                font-family: $mainfont;
+                margin: 0;
+            }
+            .bi-x-square {
+                position: absolute;
+                font-size: 20px;
+                right: 30px;
+                top: 70px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+            }
+            .bi-x-square:hover {
+                color: white;
+            }
+        }
+        .overlay-content {
+            h3 {
+                margin-bottom: 15px;
+                font-family: $mainfont;
+                font-size: 20px;
+            }
+            p {
+                font-family: $mainfont;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            .overlay-hero {
+                padding: 30px 40px;
+                .overlay-hero-text {
+                    width: 100%;
+                }
+                img {
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            .overlay-author-section {
+                background-color: $lightgreen;
+                padding: 30px 40px;
+                img {
+                    width: 90%;
+                    border-radius: 50%;
+                };
+            }
+        }
+    }
+    .about-overlay.active {
+        visibility: visible;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        overflow-x: visible;
+        overflow-y: auto;
+        transition: all 0.5s ease-in-out;
+        z-index: 6;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        .about-overlay {
+            left: -600px;
+            .overlay-content {
+                .overlay-hero {
+                    img {
+                        width: 70%;
+                    }
+                }
+                .overlay-author-section {
+                    img {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    body {
+        .about-overlay {
+            left: -800px;
+            .overlay-content {
+                .overlay-hero {
+                    padding: 30px 100px;
+                    img {
+                        width: 70%;
+                    }
+                }
+                .overlay-author-section {
+                    padding: 30px 100px;
+                    img {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }   
+}
+@media only screen and (min-width: 1040px) {
+    body {
+        .about-overlay {
+            left: -1000px;
+            .overlay-content {
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 16px;
+                }
+                .overlay-hero {
+                    padding: 30px 100px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    .overlay-hero-text {
+                        text-align: left;
+                        width: 48%;
+                        margin-right: 20px;
+                    }
+                    img {
+                        width: 48%;
+                    }
+                }
+                .overlay-author-section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row-reverse;
+                    padding: 30px 100px;
+                    .author-text {
+                        width: 48%;
+                        margin-left: 20px;
+                        text-align: right;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                    }
+                    img {
+                        width: 48%;
+                        height: 450px;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    } 
+}

@@ -1,0 +1,187 @@
+//--------------------------FOOTER--------------------------------
+
+footer {
+    background-color: $beige;
+    width: 100%;
+    margin-top: 30px;
+    .footer-upper-container {
+        background-color: $darkgrey;
+        padding: 30px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        .logo {
+            @include logo-style;
+            width: 20%;
+            margin-top: -4px;
+            .logo-text {
+                font-size: 18px;
+                margin-bottom: -12px;
+                color: white;
+            }
+        }
+        #footer-quote {
+            display: none;
+        }
+        .subscribe-container {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 80%;
+            input {
+                font-family: $mainfont;
+                padding: 5px;
+                font-size: 12px;
+                width: 150px;
+            }
+            #subscribe-button {
+                @include button;
+                width: auto;
+                transition: all 0.3s ease-in-out;
+            }
+            #subscribe-button:hover {
+                background-color: $beige;
+                color: black;
+            }
+        }
+    }
+    .footer-main-container {
+        background-color: $lightgrey;
+        padding: 50px 30px 10px 30px;
+        #footer-link-container{
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                font-family: $mainfont;
+                li {
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+                li a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 12px;
+                }
+            }
+        }
+        #socials-container {
+            margin: 20px 0;
+            text-align: left;
+            i {
+                margin: 0 5px;
+                font-size: 18px;
+            }
+        }
+    }
+    .footer-lower-container {
+        background-color: $darkgrey;
+        padding: 10px 30px;
+        p {
+            font-size: 10px;
+            color: white;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    footer {
+        .footer-upper-container {
+            padding: 30px 100px;
+            .subscribe-container {
+                input {
+                    width: 60%;
+                }
+            }
+        }
+        .footer-main-container {
+            #footer-link-container {
+                ul {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer {
+        .footer-upper-container {
+            .subscribe-container {
+                input {
+                }
+            }
+        }
+        .footer-main-container {
+            padding: 50px 100px 10px 100px;
+            #footer-link-container {
+                ul {
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1040px) {
+    footer {
+        .footer-upper-container {
+            .logo {
+                width: 10%;
+                margin: 0;
+                margin-top: -20px;
+                .logo-text {
+                    font-size: 30px;
+                    margin-bottom: -19px;
+                }
+            }
+            #footer-quote {
+                display: block;
+                color: white;
+                font-size: 20px;
+                margin: 0 0 0 30px;
+                margin-top: auto;
+                margin-bottom: auto;
+                width: 41%;
+            }
+            .subscribe-container {
+                display: flex;
+                justify-content: flex-end;
+                width: 40%;
+                #subscribe-button {
+                    font-size: 18px;
+                    margin-left: 10px;
+                }
+                input {
+                    font-size: 18px;
+                }
+            }
+        }
+        .footer-main-container {
+            padding: 50px 100px 10px 100px;
+            #footer-link-container {
+                ul {
+                    justify-content: flex-start;
+                    li {
+                        margin: 0 20px;
+                    }
+                    li a {
+                        font-size: 17px;
+                    }
+                }
+            }
+            #socials-container {
+                margin: 20px 20px;
+                i {
+                    margin: 0;
+                    margin-right: 30px;
+                    font-size: 25px;
+                }
+            }
+        }
+        .footer-lower-container {
+            padding: 20px 30px;
+            p {
+                font-size: 15px;
+                margin: 0;
+            }
+        }
+    }  
+}
